@@ -24,8 +24,6 @@ for i in range(len(df)):
     # Loại bỏ các kí tự đặc biệt
     valueNew = gensim.utils.simple_preprocess(value)
     valueNew = ' '.join(valueNew)
-    # Sau khi loại bỏ kí tự đặc biệt thì file sẽ bị mất nhận diện chuỗi -> thêm dấu nháy vào chuỗi
-    valueNew = '"' + str(valueNew) + '"'
     #Chuẩn hóa ngôn ngữ tiếng việt sử dụng pyvi
     value = gensim.utils.tokenize(valueNew)
     valueNew = ViTokenizer.tokenize(value)
